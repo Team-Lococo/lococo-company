@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign t = site.data.strings[page.lang] %}
+<section class="page-head">
+  <div class="wrap">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+  </div>
+</section>
+<article class="wrap prose">
+  {{ content }}
+</article>
+{% unless page.no_cta %}{% include cta-band.html %}{% endunless %}

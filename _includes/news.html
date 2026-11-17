@@ -1,0 +1,11 @@
+{% assign L = page.lang %}
+<ul class="newslist">
+  {% for n in site.data.news %}
+  {% assign title_key = 'title_' | append: L %}
+  <li>
+    <span class="news-date">{{ n.date }}</span>
+    {% if n.url != "" %}<a href="{{ n.url }}" target="_blank" rel="noopener">{{ n[title_key] }}</a>{% else %}<span>{{ n[title_key] }}</span>{% endif %}
+    {% if n.source != "" %}<span class="news-src">{{ n.source }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

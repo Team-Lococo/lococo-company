@@ -1,0 +1,36 @@
+{% assign t = site.data.strings[page.lang] %}
+{% assign S = site.data.site %}
+{% if page.lang == 'ko' %}{% assign prefix = '/ko' %}{% else %}{% assign prefix = '' %}{% endif %}
+<footer class="site-footer">
+  <div class="wrap grid-footer">
+    <div>
+      <div class="brand-word">Lococo</div>
+      <p class="muted small">{{ S.full_name }}<br>{{ S.tagline }}</p>
+    </div>
+    <div>
+      <p class="foot-h">{{ t.footer_menu }}</p>
+      <a href="{{ prefix }}/about/">{{ t.nav.about }}</a>
+      <a href="{{ prefix }}/projects/">{{ t.nav.projects }}</a>
+      <a href="{{ prefix }}/news/">{{ t.nav.news }}</a>
+      <a href="{{ prefix }}/brands/">{{ t.nav.brands }}</a>
+      <a href="{{ prefix }}/contact/">{{ t.nav.contact }}</a>
+    </div>
+    <div>
+      <p class="foot-h">Lococo</p>
+      <a href="{{ S.shop_url }}" target="_blank" rel="noopener">{{ t.footer_shop }} · lococo.beauty</a>
+      {% if S.review_url != "" %}<a href="{{ S.review_url }}" target="_blank" rel="noopener">{{ t.footer_review }}</a>{% endif %}
+      {% if S.instagram != "" %}<a href="{{ S.instagram }}" target="_blank" rel="noopener">Instagram {{ S.instagram_handle }}</a>{% endif %}
+      {% if S.tiktok != "" %}<a href="{{ S.tiktok }}" target="_blank" rel="noopener">TikTok</a>{% endif %}
+      {% if S.linkedin != "" %}<a href="{{ S.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    </div>
+    <div>
+      {% for e in S.entities %}
+      <p class="small"><strong>{{ e.name }}</strong><br>{{ e.address }}</p>
+      {% endfor %}
+      <a href="mailto:{{ S.email_general }}">{{ S.email_general }}</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom small muted">
+    © {{ 'now' | date: "%Y" }} Lococo. {{ t.footer_rights }}
+  </div>
+</footer>

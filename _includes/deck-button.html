@@ -1,0 +1,7 @@
+{% assign t = site.data.strings[page.lang] %}
+{% assign S = site.data.site %}
+{% if S.deck_url != "" %}
+<a class="btn btn-ghost" href="{{ S.deck_url }}" target="_blank" rel="noopener">{{ t.deck_download }}</a>
+{% else %}
+<a class="btn btn-ghost" href="mailto:{{ S.email_partners }}?subject=Company%20deck%20request%20-%20Lococo">{{ t.deck }}</a>
+{% endif %}

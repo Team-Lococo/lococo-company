@@ -1,0 +1,24 @@
+{% assign t = site.data.strings[page.lang] %}
+{% if page.lang == 'ko' %}{% assign prefix = '/ko' %}{% else %}{% assign prefix = '' %}{% endif %}
+{% assign other = 'ko' %}{% if page.lang == 'ko' %}{% assign other = 'en' %}{% endif %}
+{% assign alts = site.pages | where: "ref", page.ref | where: "lang", other %}
+{% if alts.size > 0 %}{% assign alt_url = alts[0].url %}{% elsif other == 'ko' %}{% assign alt_url = '/ko/' %}{% else %}{% assign alt_url = '/' %}{% endif %}
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ prefix }}/" aria-label="Lococo">
+      <span class="brand-drop" aria-hidden="true">{% include drop.svg %}</span>
+      <span class="brand-word">Lococo</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <nav class="nav">
+      <a href="{{ prefix }}/about/" {% if page.ref == 'about' %}class="on"{% endif %}>{{ t.nav.about }}</a>
+      <a href="{{ prefix }}/brands/" {% if page.ref == 'brands' %}class="on"{% endif %}>{{ t.nav.brands }}</a>
+      <a href="{{ prefix }}/projects/" {% if page.ref == 'projects' %}class="on"{% endif %}>{{ t.nav.projects }}</a>
+      <a href="{{ prefix }}/news/" {% if page.ref == 'news' %}class="on"{% endif %}>{{ t.nav.news }}</a>
+      <a href="{{ prefix }}/contact/" {% if page.ref == 'contact' %}class="on"{% endif %}>{{ t.nav.contact }}</a>
+      <a class="lang" href="{{ alt_url | relative_url }}" hreflang="{{ other }}">{{ t.lang_switch }}</a>
+      <a class="btn btn-primary btn-sm" href="{{ prefix }}/brands/#contact">{{ t.cta }}</a>
+    </nav>
+  </div>
+</header>

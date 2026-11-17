@@ -1,0 +1,13 @@
+{% assign t = site.data.strings[page.lang] %}
+{% assign L = page.lang %}
+<div class="grid-2 cards">
+  {% for p in site.data.projects %}
+  {% assign title_key = 'title_' | append: L %}{% assign sum_key = 'summary_' | append: L %}
+  <div class="card project {% if p.status == 'planned' %}planned{% endif %}">
+    <div class="card-meta">{{ p.date }}{% if p.status == 'planned' %} · <span class="tag">{{ t.planned }}</span>{% endif %}</div>
+    <h3>{{ p[title_key] }}</h3>
+    <p>{{ p[sum_key] }}</p>
+    {% if p.facts.size > 0 %}<div class="chips">{% for f in p.facts %}<span class="chip chip-sm">{{ f }}</span>{% endfor %}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>

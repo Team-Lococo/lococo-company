@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% assign other = 'ko' %}{% if page.lang == 'ko' %}{% assign other = 'en' %}{% endif %}
+{% assign alts = site.pages | where: "ref", page.ref | where: "lang", other %}
+{% if page.ref and alts.size > 0 %}{% assign alt = alts[0] %}
+<link rel="alternate" hreflang="{{ other }}" href="{{ alt.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+{% endif %}

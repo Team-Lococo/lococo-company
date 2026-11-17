@@ -1,0 +1,10 @@
+{% assign t = site.data.strings[page.lang] %}
+{% assign L = page.lang %}
+<ol class="timeline">
+  {% for item in site.data.timeline %}
+  <li class="tl {% if item.status == 'planned' %}tl-planned{% endif %}">
+    <div class="tl-date">{{ item.date }}{% if item.status == 'planned' %} <span class="tag">{{ t.planned }}</span>{% endif %}</div>
+    <div class="tl-text">{{ item[L] }}</div>
+  </li>
+  {% endfor %}
+</ol>

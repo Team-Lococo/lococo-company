@@ -1,0 +1,11 @@
+# 팀. photo 는 assets/img/ 안의 파일 이름 (없으면 이름 첫 글자가 보입니다).
+- name_en: "Minhee Kim"
+  name_ko: "김민희"
+  role_en: "Founder & CEO"
+  role_ko: "대표"
+  photo: ""
+- name_en: "Jimin Kim"
+  name_ko: "김지민"
+  role_en: "Co-founder · Marketing & Content"
+  role_ko: "공동 창업자 · 마케팅·콘텐츠"
+  photo: ""

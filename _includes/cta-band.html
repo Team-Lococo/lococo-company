@@ -1,0 +1,20 @@
+{% assign t = site.data.strings[page.lang] %}
+{% assign S = site.data.site %}
+{% if page.lang == 'ko' %}{% assign prefix = '/ko' %}{% else %}{% assign prefix = '' %}{% endif %}
+<section class="cta-band">
+  <div class="wrap bar">
+    <div>
+      {% if page.lang == 'ko' %}
+      <h2>스페인·유럽 진출을 준비 중이신가요?</h2>
+      <p>브랜드와 제품을 알려 주시면 2영업일 안에 답합니다.</p>
+      {% else %}
+      <h2>Launching in Spain or Europe?</h2>
+      <p>Tell us about your brand and we'll reply within two business days.</p>
+      {% endif %}
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:{{ S.email_partners }}?subject=Partnership%20inquiry%20-%20Lococo">{{ t.cta }}</a>
+      {% unless page.ref == "brands" %}<a class="btn btn-ghost" href="{{ prefix }}/brands/">{{ t.nav.brands }} →</a>{% endunless %}
+    </div>
+  </div>
+</section>

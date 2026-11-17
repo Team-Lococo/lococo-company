@@ -1,0 +1,13 @@
+# 첫 화면의 숫자 4개. value 는 그대로 보여 주는 글자입니다 (예: "400+").
+- value: "2"
+  en: "Pop-ups in Madrid"
+  ko: "마드리드 팝업"
+- value: "400+"
+  en: "Pre-registrations for our first pop-up"
+  ko: "첫 팝업 사전 등록"
+- value: "400+"
+  en: "Creators in our Spanish ambassador network"
+  ko: "스페인 크리에이터 네트워크"
+- value: "100+"
+  en: "Creator contents produced"
+  ko: "크리에이터 콘텐츠"

@@ -1,0 +1,51 @@
+# 프로젝트 카드. 최근 것을 위에 두세요. status: done / planned
+- date: "Dec 2025"
+  status: done
+  title_en: "K-Beauty Skin Lab"
+  title_ko: "K-Beauty Skin Lab 팝업"
+  summary_en: "Our first pop-up in Chamberí, Madrid. Six Korean brands, 1:1 skin consultations and personalised routines for 400+ pre-registered visitors."
+  summary_ko: "마드리드 Chamberí 에서 연 첫 팝업. 한국 브랜드 6개, 1:1 피부 상담과 맞춤 루틴 추천. 사전 등록 400명+."
+  facts:
+    - "6 brands"
+    - "400+ pre-registrations"
+- date: "2026"
+  status: done
+  title_en: "K-Beauty Ambassador programme"
+  title_ko: "K-Beauty Ambassador 프로그램"
+  summary_en: "A network of 400+ Spanish creators who try Korean skincare first and share honest routines. Monthly seeding boxes, affiliate codes and a review website."
+  summary_ko: "한국 스킨케어를 먼저 써 보고 솔직한 루틴을 나누는 스페인 크리에이터 400명+. 월간 씨딩 박스, 어필리에이트 코드, 리뷰 웹사이트."
+  facts:
+    - "400+ creators"
+    - "100+ contents"
+- date: "Sep 2026"
+  status: done
+  title_en: "lococo.beauty opens"
+  title_ko: "lococo.beauty 오픈"
+  summary_en: "Our online store for Spain. Stock held in Valencia, delivery in 2–3 days, routines built around skin goals and ingredients."
+  summary_ko: "스페인 소비자를 위한 온라인 스토어. 발렌시아 재고, 2~3일 배송, 피부 고민·성분 기준 루틴 큐레이션."
+  facts:
+    - "2–3 day delivery in Spain"
+- date: "Sep 2026"
+  status: done
+  title_en: "Beauty Inside & Out × Oki Doki Labs"
+  title_ko: "Beauty Inside & Out × Oki Doki Labs"
+  summary_en: "Two-day collaboration event at Oki Doki Labs café in Madrid with AI skin analysis and creator content. We prepared for 150 guests and welcomed about 300."
+  summary_ko: "마드리드 Oki Doki Labs 카페와 이틀간 진행한 협업 이벤트. AI 피부 측정과 크리에이터 콘텐츠. 150명을 준비했는데 약 300명이 방문."
+  facts:
+    - "~300 visitors"
+    - "23 creators · 32 contents"
+    - "127K+ views"
+- date: "Dec 2026"
+  status: planned
+  title_en: "Salamanca pop-up"
+  title_ko: "살라망카 팝업"
+  summary_en: "A three-week pop-up in Madrid's Salamanca district, with skin measurement and personal-colour experiences. A rehearsal for our flagship store."
+  summary_ko: "마드리드 살라망카 지구에서 3주 팝업. 피부 측정·퍼스널 컬러 체험. 플래그십 스토어의 예행연습."
+  facts: []
+- date: "2027"
+  status: planned
+  title_en: "Flagship store, Madrid"
+  title_ko: "마드리드 플래그십 스토어"
+  summary_en: "Our first permanent K-beauty store in Madrid — the place where European customers test Korean skincare in person."
+  summary_ko: "마드리드 첫 상설 K-뷰티 스토어. 유럽 고객이 한국 스킨케어를 직접 써 보는 곳."
+  facts: []

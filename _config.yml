@@ -1,0 +1,36 @@
+# Lococo 회사 소개 홈페이지 설정 (Jekyll)
+# 보통은 건드릴 일이 없습니다. 글은 각 페이지 .md 파일, 숫자·목록은 _data/ 폴더를 고치세요.
+
+title: Lococo
+description: "Your first partner for K-beauty in Europe. Stock in Spain, local fulfilment, 400+ creators and pop-ups in Madrid."
+url: "https://company.lococo.beauty"
+baseurl: ""
+lang: en
+timezone: Europe/Madrid
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+
+# ko/ 폴더 안의 페이지는 한국어, 나머지는 영어
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      lang: en
+  - scope:
+      path: "ko"
+    values:
+      layout: page
+      lang: ko

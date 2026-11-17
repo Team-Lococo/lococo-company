@@ -1,0 +1,25 @@
+# 회사 기본 정보. 여기 값을 바꾸면 모든 페이지에 한 번에 반영됩니다.
+name: Lococo
+full_name: "Loco por Cosméticos Coreanos"
+tagline: "Skincare is Selfcare."
+
+shop_url: "https://lococo.beauty"
+review_url: "https://review.lococo.beauty"
+instagram: "https://www.instagram.com/lococo.official"
+instagram_handle: "@lococo.official"
+tiktok: ""            # 틱톡 주소 (비우면 안 보임)
+linkedin: ""          # 링크드인 주소 (비우면 안 보임)
+
+# 문의 받는 메일 (공개됩니다 — 업무용 주소만)
+email_partners: "sales@lococo.beauty"
+email_press: "sales@lococo.beauty"
+email_general: "sales@lococo.beauty"
+
+# 회사 소개서 공개 링크. 비워 두면 '소개서 요청' 메일 버튼이 대신 나옵니다.
+deck_url: ""
+
+entities:
+  - name: "LOCOCO IBERIA, S.L."
+    address: "Calle José Abascal 44, 28003 Madrid, Spain"
+  - name: "LOCOCO CO., LTD."
+    address: "Seoul, Korea"

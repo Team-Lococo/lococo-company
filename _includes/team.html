@@ -1,0 +1,10 @@
+{% assign L = page.lang %}
+<div class="team">
+  {% for m in site.data.team %}
+  {% assign nk = 'name_' | append: L %}{% assign rk = 'role_' | append: L %}
+  <div class="member">
+    {% if m.photo != "" %}<img class="avatar" src="{{ '/assets/img/' | append: m.photo | relative_url }}" alt="{{ m[nk] }}">{% else %}<div class="avatar avatar-txt">{{ m.name_en | slice: 0 }}</div>{% endif %}
+    <div><strong>{{ m[nk] }}</strong><br><span class="muted">{{ m[rk] }}</span></div>
+  </div>
+  {% endfor %}
+</div>

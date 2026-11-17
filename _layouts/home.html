@@ -1,0 +1,77 @@
+---
+layout: default
+---
+{% assign t = site.data.strings[page.lang] %}
+{% assign L = page.lang %}
+{% if L == 'ko' %}{% assign prefix = '/ko' %}{% else %}{% assign prefix = '' %}{% endif %}
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1>{{ page.hero_title }}</h1>
+    <p class="lead">{{ page.hero_text }}</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ prefix }}/brands/">{{ t.cta }}</a>
+      {% include deck-button.html %}
+    </div>
+  </div>
+  <div class="hero-drop" aria-hidden="true">{% include drop.svg %}</div>
+</section>
+
+<section class="stats">
+  <div class="wrap grid-4">
+    {% for s in site.data.stats %}
+    <div class="stat">
+      <div class="stat-value">{{ s.value }}</div>
+      <div class="stat-label">{{ s[L] }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.what_eyebrow }}</p>
+    <h2>{{ page.what_title }}</h2>
+    <div class="grid-3 cards">
+      {% for c in page.pillars %}
+      <div class="card">
+        <div class="card-icon">{{ forloop.index }}</div>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.text }}</p>
+        {% if c.link %}<a class="textlink" href="{{ c.link }}">{{ c.link_label }} →</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.brands_eyebrow }}</p>
+    <h2>{{ page.brands_title }}</h2>
+    <div class="chips">
+      {% for b in site.data.partners.worked_with %}<span class="chip">{{ b }}</span>{% endfor %}
+    </div>
+    <p class="muted">{{ page.brands_note }}
+      {% for b in site.data.partners.sold %}{{ b }}{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.timeline_eyebrow }}</p>
+    <h2>{{ page.timeline_title }}</h2>
+    {% include timeline.html %}
+  </div>
+</section>
+
+<section class="section section-blue">
+  <div class="wrap center">
+    <p class="slogan">{{ site.data.site.tagline }}</p>
+    <p class="lead-light">{{ page.slogan_text }}</p>
+    <a class="btn btn-light" href="{{ site.data.site.shop_url }}" target="_blank" rel="noopener">{{ t.shop }}</a>
+  </div>
+</section>
+
+{% include cta-band.html %}
